@@ -16,7 +16,7 @@ export const signOut = () => {
 };
 
 
-export const CreateStream = (formValues) =>  async (dispatch) => {                     //redux-thunk
+export const  createStream = formValues =>  async dispatch => {                     //redux-thunk
             streams.post('/streams',formValues) ;                                                                 // post-Create '/streams -path to create the form values (title and description)
     };
 

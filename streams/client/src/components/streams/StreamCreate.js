@@ -2,7 +2,7 @@
 import React from 'react';
 import {Field,reduxForm} from 'redux-form';    //i using rf 
 import {connect} from 'react-redux';
-import  {CreateStream} from '../../actions';
+import  {createStream} from '../../actions';
 
 class SteamCreate extends React.Component {
     renderError({error,touched}) {
@@ -28,8 +28,8 @@ renderInput = ({input,label,meta}) => {
 }
     
 
-    onSubmit(formValues)  {
-    console.log(formValues);
+    onSubmit = formValues  => {
+        this.props.createStream(formValues);
 }
 
     render() {
@@ -67,5 +67,5 @@ const formWrapped = reduxForm({                                             /// 
 })(SteamCreate);
 
 
-export default connect(null,CreateStream) (formWrapped);
+export default connect(null,{createStream}) (formWrapped);
 
