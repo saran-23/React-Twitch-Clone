@@ -1,18 +1,33 @@
+
 import React from 'react';
 import {Field,reduxForm} from 'redux-form';    //i using rf 
- 
+import {connect} from 'react-redux';
+import  {CreateStream} from '../../actions';
+
 class SteamCreate extends React.Component {
-renderInput({input,label,meta}) {
-    
+    renderError({error,touched}) {
+        if(touched && error) {
+            return (
+                <div className="ui error message">
+                    <div className="header">
+                        {error}
+                    </div>
+                </div>
+            );
+        }
+    }
+renderInput = ({input,label,meta}) => {
+    const className = `field ${meta.error && meta.touched  ?  'error' :  ' ' }`;
     return (
-    <div className="field">
+    <div className={className}>
     <label>{label}</label>
-  < input {...input} />
-        <div>{meta.error}</div>
+  < input {...input}  autoComplete='off'/>
+            {this.renderError(meta)}
   </div>
 );
 }
     
+
     onSubmit(formValues)  {
     console.log(formValues);
 }
@@ -21,9 +36,9 @@ renderInput({input,label,meta}) {
         return (
             <form 
             onSubmit={this.props.handleSubmit(this.onSubmit)}
-            className="ui form"
+            className="ui form error"
             >
-                <Field  name="Title" component={this.renderInput} label="Enter Title"/>
+                <Field  name="title" component={this.renderInput} label="Enter Title"/>
                 <Field name ="description" component={this.renderInput}  label="Enter Description"/>
                 <button className="ui button primary">
                     Submit
@@ -33,20 +48,24 @@ renderInput({input,label,meta}) {
     }
 }
 
-const validate =  formValues => {
+const validate =  (formValues) => {
     const errors = {};
 
-    if(!formValues.Title) {
-        errors.Title="Please Enter the Title"
+    if(!formValues.title) {
+        errors.title="Please Enter the Title"
     }
     if(!formValues.description) {
         errors.description ="Please Enter a Description";
     }
     return errors;
-}
+};
 
 
-export default reduxForm({
+const formWrapped = reduxForm({                                             /// same as connect ()
     form: 'steamCreate',
-    validate,
+    validate
 })(SteamCreate);
+
+
+export default connect(null,CreateStream) (formWrapped);
+
