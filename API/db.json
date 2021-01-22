@@ -4,6 +4,11 @@
       "title": "fff",
       "description": "gc b",
       "id": 1
+    },
+    {
+      "title": "Other stream",
+      "description": "here is some stream",
+      "id": 2
     }
   ]
 }
