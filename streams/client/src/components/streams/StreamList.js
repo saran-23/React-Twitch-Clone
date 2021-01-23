@@ -1,4 +1,5 @@
 import React from 'react';
+import  {Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {fetchStreams} from '../../actions';
 
@@ -6,10 +7,25 @@ import {fetchStreams} from '../../actions';
         componentDidMount() {
             this.props.fetchStreams();
         }
-        renderList() {   //displaying to the screen
+        renderAdmin(stream) {
+         if(stream.userId === this.props.currentUserId)  {                          // condition checking for current user
+                return (
+                <div className="right floated content" >                                  
+                    <button className="ui button primary">
+                        Edit
+                    </button>
+                    <button className="ui button negative">
+                        Delete
+                    </button>
+                </div>
+                );
+            }   
+        }
+        renderList() {   //displaying content to the screen
                     return this.props.streams.map(stream => {
                         return(
                             <div className="item" key={stream.id}>
+                                {this.renderAdmin(stream)}
                                 <i className="  large middle aligned icon camera"/>
                                 <div className="content">
                                     {stream.title}
@@ -17,9 +33,21 @@ import {fetchStreams} from '../../actions';
                                         {stream.description}
                                     </div>
                                 </div>
+
                             </div>
                         )
                     });
+        };
+        renderCreate() {                //btn
+                if(this.props.isSignedIn) {
+                    return (
+                        <div style={{textAlign:'right'}}>
+                            <Link to="/streams/new" className="ui button primary">
+                                Create Stream
+                            </Link>
+                        </div>
+                    );
+                }
         }
         render() {
             return (
@@ -28,13 +56,19 @@ import {fetchStreams} from '../../actions';
                  <div className ="ui celled list">
                      { this.renderList()}
                  </div>
+                 {this.renderCreate()}
                  </div>
             )
                 }
     }   
 
 const mapStateToProps  = (state )=> {
-            return { streams: Object.values(state.stream)};
+            return { 
+            streams: Object.values(state.stream),
+            currentUserId:state.auth.userId,
+            isSignedIn: state.auth.isSignedIn
+        };
+            
         };
 
 export default connect (mapStateToProps,{fetchStreams}) (StreamList);
