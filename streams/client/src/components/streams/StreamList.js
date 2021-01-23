@@ -28,7 +28,9 @@ import {fetchStreams} from '../../actions';
                                 {this.renderAdmin(stream)}
                                 <i className="  large middle aligned icon camera"/>
                                 <div className="content">
+                                    <Link to={`/streams/${stream.id}`} className="header">
                                     {stream.title}
+                                    </Link>
                                     <div className="description">
                                         {stream.description}
                                     </div>
@@ -64,9 +66,9 @@ import {fetchStreams} from '../../actions';
 
 const mapStateToProps  = (state )=> {
             return { 
-            streams: Object.values(state.stream),
-            currentUserId:state.auth.userId,
-            isSignedIn: state.auth.isSignedIn
+                streams: Object.values(state.stream),
+                currentUserId:state.auth.userId,
+                isSignedIn: state.auth.isSignedIn
         };
             
         };
