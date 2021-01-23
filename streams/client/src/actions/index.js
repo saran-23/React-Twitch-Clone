@@ -1,5 +1,6 @@
-import { formValues } from 'redux-form';
+
 import streams from '../api/streams';
+import history from '../history';     //my history file
 import {
     SIGN_IN,
     SIGN_OUT,
@@ -28,6 +29,8 @@ export const  createStream = formValues =>  async (dispatch ,getState)=> {      
         const { userId } = getState().auth;
            const response =   await  streams.post('/streams',{...formValues,userId});                                                                 // post-Create '/streams -path to create the form values (title and description)
         dispatch({type:CREATE_STREAM,payload:response.data}); 
+
+        history.push('/');      //programmatic navigation --forcing to go to the  homepage (automatic)
         };
 
 export const  fetchStreams   =() => async dispatch => {                       //geting list of records
