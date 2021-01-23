@@ -45,9 +45,11 @@ export const fetchStream  =(id) => async dispatch => {                    // get
 };
 
 export const editStream = (id,formValues) => async dispatch => {      //updating
-    const response = await streams.put(`/streams/{$id}`,formValues);
-
+    const response = await streams.patch(`/streams/${id}`,formValues);
     dispatch({type:EDIT_STREAM,payload:response.data});
+
+    history.push('/');   // it will navigate automatially to homepage when form submitted
+
 };
 export const deleteStream = (id) => async dispatch => {   //destrory
     await streams.delete(`/streams/${id}`);
