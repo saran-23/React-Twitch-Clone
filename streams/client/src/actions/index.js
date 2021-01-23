@@ -53,8 +53,9 @@ export const editStream = (id,formValues) => async dispatch => {      //updating
 };
 export const deleteStream = (id) => async dispatch => {   //destrory
     await streams.delete(`/streams/${id}`);
-
     dispatch({type:DELETE_STREAM, payload:id});
+    
+    history.push('/');   // it will navigate automatially to homepage when form submitted
 };
 
 
