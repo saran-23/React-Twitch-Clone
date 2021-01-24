@@ -1,6 +1,9 @@
 import  _  from 'lodash';
 import React from 'react';
 import {connect} from 'react-redux';
+import 'antd/dist/antd.css'; // 
+import {Spin} from 'antd';
+
 
 import {fetchStream,editStream} from '../../actions';
 import  StreamForm from './StreamForm';
@@ -15,10 +18,13 @@ onSubmit = formvalues => {
 
     render() {
         if(!this.props.stream){
-            return <div>loading...</div> 
+                return <div><Spin></Spin></div>
         }
     return  (
+
+ 
         <div>
+     
             <h3 className=" ui header">Edit a stream</h3>
             <StreamForm
             initialValues={_.pick(this.props.stream, 'title','description')}    // _. pick helps to pick the specific content (title) in same array
@@ -27,6 +33,7 @@ onSubmit = formvalues => {
     );
     }
 }
+
 
 const mapStateToProps = (state,ownProps) => {
   

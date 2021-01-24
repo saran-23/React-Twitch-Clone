@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import flv from 'flv.js';
+import {Spin} from 'antd';
+import 'antd/dist/antd.css';
 
 import {fetchStream} from '../../actions';    //shows list of records
 
@@ -21,8 +23,13 @@ componentDidUpdate() {
     this.buildPlayer();
 }
 
-buildPlayer() {
+componentWillUnmount() {
+    
+    this.player.destroy();
+}
 
+
+buildPlayer() {
     if(this.player || !this.props.stream) {
         return;
     }
@@ -37,8 +44,8 @@ buildPlayer() {
 }
 
 render() {
-    if (!this.props.stream) {
-        return <div>Loading...</div>
+    if (this.props.stream) {
+        return <div><Spin/></div>
     }
     const { title,description} = this.props.stream;
     return  (

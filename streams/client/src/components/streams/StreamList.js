@@ -31,6 +31,7 @@ import {fetchStreams} from '../../actions';
                                     <Link to={`/streams/${stream.id}`} className="header">
                                     {stream.title}
                                     </Link>
+                                    
                                     <div className="description">
                                         {stream.description}
                                     </div>
