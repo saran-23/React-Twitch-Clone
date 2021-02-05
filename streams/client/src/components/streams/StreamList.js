@@ -26,14 +26,22 @@ import {fetchStreams} from '../../actions';
                         return(
                             <div className="item" key={stream.id}>
                                 {this.renderAdmin(stream)}
-                                <i className="  large middle aligned icon camera"/>
+                                <i className="  large icon user"/>
                                 <div className="content">
-                                    <Link to={`/streams/${stream.id}`} className="header">
-                                    {stream.title}
+                                    <Link to={`/streams/edit/${stream.id}`} className="header">
+ 
+                                    Name: {stream.name}
                                     </Link>
                                     
-                                    <div className="description">
-                                        {stream.description}
+                                    <div className="header">
+                                        Age: {stream.age} <br/>
+                                        E-mail: {stream.email}<br/>
+                                        Phone Number: {stream.phone}<br/>
+                                        Address: {stream.address}<br/>
+                                        Course: {stream.course}<br/>
+                                        Fees Paid: {stream.feespaid}<br/>
+                                        Mother Name: {stream.mothername}<br/>
+                                        Father Name:{stream.fathername}
                                     </div>
                                 </div>
 
@@ -55,7 +63,7 @@ import {fetchStreams} from '../../actions';
         render() {
             return (
                 <div>
-                <h2>Streams</h2>
+                <h2 className="ui header purple"> Records</h2>
                  <div className ="ui celled list">
                      { this.renderList()}
                  </div>

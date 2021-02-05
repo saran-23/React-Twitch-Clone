@@ -19,7 +19,8 @@ renderInput = ({input,label,meta}) => {
     return (
     <div className={className}>
     <label>{label}</label>
-  < input {...input}  autoComplete='off'/>
+  < input {...input}  autoComplete='on'/>
+  
             {this.renderError(meta)}
   </div>
 );
@@ -34,10 +35,20 @@ renderInput = ({input,label,meta}) => {
         return (
             <form 
             onSubmit={this.props.handleSubmit(this.onSubmit)}
-            className="ui form error"
+            className="ui form  error"
             >
-                <Field  name="title" component={this.renderInput} label="Enter Title"/>
-                <Field name ="description" component={this.renderInput}  label="Enter Description"/>
+                <Field  name="name"  component={this.renderInput} label=" Name" placeholder="Enter your name"/>
+                <Field name ="age" component={this.renderInput}  label="Age" />
+                <Field name ="email" component={this.renderInput}  label="E-mail" />
+                <Field name ="phone" type="number" component={this.renderInput}  label="Phone number" />
+                <Field name ="address" component={this.renderInput}  label="Residential Address" />
+                <Field name ="course" component={this.renderInput}  label="Course" />
+                <Field name ="feespaid" component={this.renderInput}  label="Fees  paid" />
+                <Field name ="mothername" component={this.renderInput}  label="Mother Name" />
+                <Field name ="fathername" component={this.renderInput}  label="Father Name" />
+
+                {/* <Field  name="title" component={this.renderInput} label="Enter Title"/>
+                <Field name ="description" component={this.renderInput}  label="Enter Description"/> */}
                 <button className="ui button primary">
                     Submit
                 </button>
@@ -49,11 +60,32 @@ renderInput = ({input,label,meta}) => {
 const validate =  (formValues) => {
     const errors = {};
 
-    if(!formValues.title) {
-        errors.title="Please Enter the Title"
+    if(!formValues.name) {
+        errors.name="Please Enter your Name"
     }
-    if(!formValues.description) {
-        errors.description ="Please Enter a Description";
+    if(!formValues.age) {
+        errors.age ="Please Enter a Age";
+    }
+     if(!formValues.email) {
+        errors.email ="Please your email";
+    }
+    if(!formValues.phone) {
+        errors.phone ="Please your phone number";
+    }
+    if(!formValues.address) {
+        errors.address ="enter the Address";
+    }
+    if(!formValues.course) {
+        errors.course="choose the Course";
+    }
+    if(!formValues.feespaid) {
+        errors.feespaid ="enter the amount";
+    }
+    if(!formValues.mothername) {
+        errors.mothername ="Please enter your Mother Name";
+    }
+    if(!formValues.Fathername) {
+        errors.Fathername ="Please enter  your Father Name";
     }
     return errors;
 };

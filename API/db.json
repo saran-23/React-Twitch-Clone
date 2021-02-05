@@ -1,48 +1,31 @@
 {
   "streams": [
     {
-      "title": "Roman  Saran",
-      "description": "first stream",
-      "id": 3
-    },
-     {
-      "title": "test2 ",
-      "description": "working  stream",
-      "id": 13
-    },
-     {
-      "title": "test ",
-      "description": "first stream",
-      "id": 12
-    },
-    {
-     
-     "title": "monesh",
-      "description": "new stream",
-      "id": 10
-    },
-    {
-      "title": "monesh",
-      "description": "ns",
+      "name": "Saran D",
+      "email": "romansaran446gmail.com",
+      "phone": "7777777777",
+      "address": "Yhvf",
+      "age": "24",
+      "course": "mca",
+      "feespaid": "17504",
+      "mothername": "mother",
+      "Fathername": "father",
       "userId": "108973381247233885941",
-      "id": 6
+      "id": 17,
+      "fathername": "appa"
     },
     {
-      "title": "bestmonesh 1",
-      "description": "@",
-      "userId": "100292397790440125401",
-      "id": 7
-    },
-    {
-      "title": "Saran",
-      "description": "react",
-      "id": 8
-    },
-    {
-      "title": "antdss",
-      "description": "spinner",
+      "name": "Gokul Krishnan ",
+      "age": "24",
+      "email": "demo1@gmail.com",
+      "phone": "88200202020",
+      "address": "tnagar",
+      "course": "mba",
+      "feespaid": "22500",
+      "mothername": "mom",
+      "fathername": "father",
       "userId": "108973381247233885941",
-      "id": 9
+      "id": 18
     }
   ]
 }

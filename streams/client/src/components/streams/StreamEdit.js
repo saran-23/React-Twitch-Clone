@@ -25,9 +25,10 @@ onSubmit = formvalues => {
  
         <div>
      
-            <h3 className=" ui header">Edit a stream</h3>
-            <StreamForm
-            initialValues={_.pick(this.props.stream, 'title','description')}    // _. pick helps to pick the specific content (title) in same array
+     <h2 className=" ui header purple" > CRUD Operations</h2>
+            <h3 className=" ui header">Edit a Form</h3>
+            <StreamForm 
+            initialValues={_.pick(this.props.stream, 'name','age','email','phone','address','course','feespaid','mothername','fathername',)}    // _. pick helps to pick the specific content (title) in same array
             onSubmit={this.onSubmit}/>
             </div>
     );
