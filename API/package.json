@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
+    "heroku": "^7.47.12",
     "json-server": "^0.16.3"
   },
   "devDependencies": {
