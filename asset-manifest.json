@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/React-Twitch-Clone/static/js/main.97244ca7.chunk.js",
-    "main.js.map": "/React-Twitch-Clone/static/js/main.97244ca7.chunk.js.map",
-    "runtime-main.js": "/React-Twitch-Clone/static/js/runtime-main.92d019bc.js",
-    "runtime-main.js.map": "/React-Twitch-Clone/static/js/runtime-main.92d019bc.js.map",
-    "static/css/2.b72b1a0e.chunk.css": "/React-Twitch-Clone/static/css/2.b72b1a0e.chunk.css",
-    "static/js/2.b708d998.chunk.js": "/React-Twitch-Clone/static/js/2.b708d998.chunk.js",
-    "static/js/2.b708d998.chunk.js.map": "/React-Twitch-Clone/static/js/2.b708d998.chunk.js.map",
-    "index.html": "/React-Twitch-Clone/index.html",
-    "static/css/2.b72b1a0e.chunk.css.map": "/React-Twitch-Clone/static/css/2.b72b1a0e.chunk.css.map",
-    "static/js/2.b708d998.chunk.js.LICENSE.txt": "/React-Twitch-Clone/static/js/2.b708d998.chunk.js.LICENSE.txt"
+    "main.js": "/ReactCRUD/crud/static/js/main.a8b519f1.chunk.js",
+    "main.js.map": "/ReactCRUD/crud/static/js/main.a8b519f1.chunk.js.map",
+    "runtime-main.js": "/ReactCRUD/crud/static/js/runtime-main.3e28aabd.js",
+    "runtime-main.js.map": "/ReactCRUD/crud/static/js/runtime-main.3e28aabd.js.map",
+    "static/css/2.b72b1a0e.chunk.css": "/ReactCRUD/crud/static/css/2.b72b1a0e.chunk.css",
+    "static/js/2.dcb29e05.chunk.js": "/ReactCRUD/crud/static/js/2.dcb29e05.chunk.js",
+    "static/js/2.dcb29e05.chunk.js.map": "/ReactCRUD/crud/static/js/2.dcb29e05.chunk.js.map",
+    "index.html": "/ReactCRUD/crud/index.html",
+    "static/css/2.b72b1a0e.chunk.css.map": "/ReactCRUD/crud/static/css/2.b72b1a0e.chunk.css.map",
+    "static/js/2.dcb29e05.chunk.js.LICENSE.txt": "/ReactCRUD/crud/static/js/2.dcb29e05.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.92d019bc.js",
+    "static/js/runtime-main.3e28aabd.js",
     "static/css/2.b72b1a0e.chunk.css",
-    "static/js/2.b708d998.chunk.js",
-    "static/js/main.97244ca7.chunk.js"
+    "static/js/2.dcb29e05.chunk.js",
+    "static/js/main.a8b519f1.chunk.js"
   ]
 }
