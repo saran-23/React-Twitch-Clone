@@ -1,20 +1,20 @@
 import React from 'react';
 import  {Link } from 'react-router-dom';
 import {connect} from 'react-redux';
-import {fetchStreams} from '../../actions';
+import {fetchrecord} from '../../actions';
 
     class StreamList extends React.Component {
         componentDidMount() {
-            this.props.fetchStreams();
+            this.props.fetchrecord();
         }
         renderAdmin(stream) {
          if(stream.userId === this.props.currentUserId)  {                          // condition checking for current user
                 return (
                 <div className="right floated content" >                                  
-                    <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
+                    <Link to={`/record/edit/${stream.id}`} className="ui button primary">
                         Edit
                     </Link>
-                    <Link to={`/streams/delete/${stream.id}`} className="ui button negative">
+                    <Link to={`/record/delete/${stream.id}`} className="ui button negative">
                         Delete
                     </Link>
                 </div>
@@ -22,13 +22,13 @@ import {fetchStreams} from '../../actions';
             }   
         }
         renderList() {   //displaying content to the screen
-                    return this.props.streams.map(stream => {
+                    return this.props.record.map(stream => {
                         return(
                             <div className="item" key={stream.id}>
                                 {this.renderAdmin(stream)}
                                 <i className="  large icon user"/>
                                 <div className="content">
-                                    <Link to={`/streams/edit/${stream.id}`} className="header">
+                                    <Link to={`/record/edit/${stream.id}`} className="header">
  
                                     Name: {stream.name}
                                     </Link>
@@ -53,7 +53,7 @@ import {fetchStreams} from '../../actions';
                 if(!this.props.isSignedout) {
                     return (
                         <div style={{textAlign:'right'}}>
-                            <Link to="/streams/new" className="ui button primary">
+                            <Link to="/record/new" className="ui button primary">
                                 Create Record
                             </Link>
                         </div>
@@ -75,13 +75,13 @@ import {fetchStreams} from '../../actions';
 
 const mapStateToProps  = (state )=> {
             return { 
-                streams: Object.values(state.stream),
+                record: Object.values(state.stream),
                 currentUserId:state.auth.userId,
                 isSignedIn: state.auth.isSignedIn
         };
             
         };
 
-export default connect (mapStateToProps,{fetchStreams}) (StreamList);
+export default connect (mapStateToProps,{fetchrecord}) (StreamList);
 
-// export default connect ({fetchStreams}) (StreamList);
+// export default connect ({fetchrecord}) (StreamList);

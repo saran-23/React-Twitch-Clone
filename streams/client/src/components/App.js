@@ -3,11 +3,11 @@ import React from  'react';
 import {Router,Route,Switch} from 'react-router-dom';
 
 
-import StreamCreate from './streams/StreamCreate';
-import StreamEdit from './streams/StreamEdit';
-import StreamDelete from './streams/StreamDelete';
-import StreamList from './streams/StreamList';
-import StreamShow from './streams/StreamShow';
+import StreamCreate from './record/StreamCreate';
+import StreamEdit from './record/StreamEdit';
+import StreamDelete from './record/StreamDelete';
+import StreamList from './record/StreamList';
+import StreamShow from './record/StreamShow';
 import Header from './Header';
 import history from '../history';
 
@@ -21,10 +21,10 @@ const App = () => {
         <Header />
         <Switch>
             <Route path ="/" exact component = {StreamList}/>
-            <Route path ="/streams/new" exact component = {StreamCreate}/>
-            <Route path ="/streams/edit/:id" exact component = {StreamEdit}/>
-            <Route path ="/streams/delete/:id" exact component = {StreamDelete}/>
-            <Route path ="/streams/:id" exact component = {StreamShow}/>
+            <Route path ="/record/new" exact component = {StreamCreate}/>
+            <Route path ="/record/edit/:id" exact component = {StreamEdit}/>
+            <Route path ="/record/delete/:id" exact component = {StreamDelete}/>
+            <Route path ="/record/:id" exact component = {StreamShow}/>
         </Switch>
             </div>
 

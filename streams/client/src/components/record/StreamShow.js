@@ -7,7 +7,7 @@
 // import {fetchStream} from '../../actions';    //shows list of records
 
 
-// class StreamShow extends React.Component {
+// class recordhow extends React.Component {
 // constructor (props) {
 //     super(props);
 
@@ -60,4 +60,4 @@
 // const mapStateToProps = (state,ownProps) => {
 //     return {stream: state.stream[ownProps.match.params.id]} ;
 // }
-// export default connect(mapStateToProps,{fetchStream}) (StreamShow);
+// export default connect(mapStateToProps,{fetchStream}) (recordhow);

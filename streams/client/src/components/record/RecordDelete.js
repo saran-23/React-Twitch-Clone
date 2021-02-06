@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 
 import Modal from '../Modal';
 import history from  '../../history';
-import {fetchStream,deleteStream} from '../../actions';
-class StreamDelete extends React.Component {
+import {fetchRecord,deleteRecord} from '../../actions';
+class RecordDelete extends React.Component {
 
         componentDidMount() {
           this.props.fetchStream (this.props.match.params.id)
@@ -24,10 +24,10 @@ class StreamDelete extends React.Component {
 
     renderContent() {
         if (!this.props.stream) {
-            return 'Are you sure you want to delete this stream ?'
+            return 'Are you sure you want to delete this Record ?'
         }
 
-        return `Are you sure you want to delete this stream with Name: ${this.props.stream.name}`
+        return `Are you sure you want to delete this Record with Name: ${this.props.stream.name}`
     }
 
 render() {
@@ -47,4 +47,4 @@ const mapStateToProps = (state,ownProps) => {
     return {stream: state.stream[ownProps.match.params.id]}
 };
 
-export default connect(mapStateToProps,{fetchStream,deleteStream}) (StreamDelete);
+export default connect(mapStateToProps,{fetchRecord,deleteRecord}) (RecordDelete);
