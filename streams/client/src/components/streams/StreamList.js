@@ -50,7 +50,7 @@ import {fetchStreams} from '../../actions';
                     });
         };
         renderCreate() {                //btn
-                if(this.props.isSignedIn) {
+                if(!this.props.isSignedout) {
                     return (
                         <div style={{textAlign:'right'}}>
                             <Link to="/streams/new" className="ui button primary">
@@ -83,3 +83,5 @@ const mapStateToProps  = (state )=> {
         };
 
 export default connect (mapStateToProps,{fetchStreams}) (StreamList);
+
+// export default connect ({fetchStreams}) (StreamList);
