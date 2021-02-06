@@ -2,7 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://saran-23.github.io/React-Twitch-Clone/streams/client",
   "homepage": "http://saran-23.github.io/React-Twitch-Clone/API",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
