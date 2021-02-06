@@ -50,7 +50,7 @@ import {fetchStreams} from '../../actions';
                     });
         };
         renderCreate() {                //btn
-                // if(!this.props.isSignedout) {
+                if(!this.props.isSignedout) {
                     return (
                         <div style={{textAlign:'right'}}>
                             <Link to="/streams/new" className="ui button primary">
@@ -58,7 +58,7 @@ import {fetchStreams} from '../../actions';
                             </Link>
                         </div>
                     );
-                // }
+                }
         }
         render() {
             return (
