@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/saran-23/React-Twitch-Clone/static/js/main.97244ca7.chunk.js",
+    "main.js.map": "/saran-23/React-Twitch-Clone/static/js/main.97244ca7.chunk.js.map",
+    "runtime-main.js": "/saran-23/React-Twitch-Clone/static/js/runtime-main.646ce001.js",
+    "runtime-main.js.map": "/saran-23/React-Twitch-Clone/static/js/runtime-main.646ce001.js.map",
+    "static/css/2.b72b1a0e.chunk.css": "/saran-23/React-Twitch-Clone/static/css/2.b72b1a0e.chunk.css",
+    "static/js/2.b708d998.chunk.js": "/saran-23/React-Twitch-Clone/static/js/2.b708d998.chunk.js",
+    "static/js/2.b708d998.chunk.js.map": "/saran-23/React-Twitch-Clone/static/js/2.b708d998.chunk.js.map",
+    "index.html": "/saran-23/React-Twitch-Clone/index.html",
+    "static/css/2.b72b1a0e.chunk.css.map": "/saran-23/React-Twitch-Clone/static/css/2.b72b1a0e.chunk.css.map",
+    "static/js/2.b708d998.chunk.js.LICENSE.txt": "/saran-23/React-Twitch-Clone/static/js/2.b708d998.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.646ce001.js",
+    "static/css/2.b72b1a0e.chunk.css",
+    "static/js/2.b708d998.chunk.js",
+    "static/js/main.97244ca7.chunk.js"
+  ]
+}
